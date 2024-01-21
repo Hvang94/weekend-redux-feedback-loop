@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import React, { useState } from "react";
+import { feelingRating } from "../../redux/ratingsSlice";
 
 function Feeling() {
-  const [rating, setRating] = useState('');
+  const [rating, setRating] = useState("");
   const dispatch = useDispatch();
 
   const onClick = () => {
-    dispatch(feelingRating(parseInt(rating)))
+    dispatch(feelingRating(parseInt(rating)));
   };
 
   return (

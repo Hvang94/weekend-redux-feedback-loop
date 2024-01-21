@@ -1,5 +1,16 @@
-import { HashRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import React, { useState } from "react";
+import { understandingRating } from "../../redux/ratingsSlice";
+
 function Understanding() {
+  const [rating, setRating] = useState("");
+  const dispatch = useDispatch();
+
+  const onClick = () => {
+    dispatch(understandingRating(parseInt(rating)));
+  };
+
   return (
     <div className="Feeling">
       <header className="App-header">
@@ -7,10 +18,14 @@ function Understanding() {
         <h4>Don't forget it!</h4>
       </header>
       <h2>How well are you understanding the content?</h2>
-      <p>Rating 1-5</p>
-      <input id="inputs" type="text"></input>
+      <input
+        onChange={(event) => setRating(event.target.value)}
+        id="inputs"
+        type="number"
+        placeholder="Rate 1-5"
+      ></input>
       <Link to="/Support/">
-        <button>Next</button>
+        <button onClick={onClick}>Next</button>
       </Link>
     </div>
   );

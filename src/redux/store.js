@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import ratingsSlicer from "./ratingsSlicer";
+import ratingsSlice from "./ratingsSlice";
 
 export default configureStore({
   reducer: {
-    ratings: ratingsSlicer,
+    ratings: ratingsSlice,
   },
 });
