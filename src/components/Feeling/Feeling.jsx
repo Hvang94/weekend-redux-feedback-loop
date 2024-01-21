@@ -19,13 +19,16 @@ function Feeling() {
       </header>
       <h2>How are you feeling today?</h2>
       <input
+        data-testid="input"
         onChange={(event) => setRating(event.target.value)}
         id="inputs"
         type="number"
         placeholder="Rate 1-5"
       ></input>
       <Link to="/Understanding/">
-        <button onClick={onClick}>Next</button>
+        <button data-testid="next" onClick={onClick}>
+          Next
+        </button>
       </Link>
     </div>
   );

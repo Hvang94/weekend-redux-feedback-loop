@@ -19,13 +19,16 @@ function Feeling() {
       </header>
       <h2>Any comments you want leave?</h2>
       <input
+        data-testid="input"
         onChange={(event) => setComments(event.target.value)}
         id="inputs"
         type="text"
         placeholder="Comments"
       ></input>
       <Link to="/Review/">
-        <button onClick={onClick}>Next</button>
+        <button data-testid="next" onClick={onClick}>
+          Next
+        </button>
       </Link>
     </div>
   );

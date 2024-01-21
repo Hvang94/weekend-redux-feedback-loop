@@ -6,7 +6,7 @@ function Feedback() {
         <>
         <h1>Thank You!</h1>
         <Link to="/">
-          <button>Leave New Feedback</button>
+          <button data-testid="next">Leave New Feedback</button>
         </Link>
       </>
     )

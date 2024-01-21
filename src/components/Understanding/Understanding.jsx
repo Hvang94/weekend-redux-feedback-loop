@@ -19,13 +19,16 @@ function Understanding() {
       </header>
       <h2>How well are you understanding the content?</h2>
       <input
+        data-testid="input"
         onChange={(event) => setRating(event.target.value)}
         id="inputs"
         type="number"
         placeholder="Rate 1-5"
       ></input>
       <Link to="/Support/">
-        <button onClick={onClick}>Next</button>
+        <button data-testid="next" onClick={onClick}>
+          Next
+        </button>
       </Link>
     </div>
   );
