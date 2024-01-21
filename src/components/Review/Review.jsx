@@ -6,7 +6,8 @@ import { clearState } from "../../redux/ratingsSlice";
 function Review() {
   const dispatch = useDispatch();
   const { feeling, understanding, support, comments } = useSelector(
-    (state) => state.ratings);
+    (state) => state.ratings
+  );
   const feedbackData = { feeling, understanding, support, comments };
 
   const submit = () => {
@@ -33,7 +34,9 @@ function Review() {
         <li>Comments: {comments}</li>
       </ul>
       <Link to="/Success/">
-        <button data-testid="next" onClick={submit}>Submit</button>
+        <button data-testid="next" onClick={submit}>
+          Submit
+        </button>
       </Link>
     </div>
   );

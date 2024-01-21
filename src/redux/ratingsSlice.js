@@ -1,11 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = [{
-  feeling: null,
-  understanding: null,
-  support: null,
-  comments: null,
-}];
+const initialState = [
+  {
+    feeling: null,
+    understanding: null,
+    support: null,
+    comments: null,
+  },
+];
 
 const ratingsSlice = createSlice({
   name: "ratings",
