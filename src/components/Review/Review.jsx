@@ -6,8 +6,7 @@ import { clearState } from "../../redux/ratingsSlice";
 function Review() {
   const dispatch = useDispatch();
   const { feeling, understanding, support, comments } = useSelector(
-    (state) => state.ratings
-  );
+    (state) => state.ratings);
   const feedbackData = { feeling, understanding, support, comments };
 
   const submit = () => {
